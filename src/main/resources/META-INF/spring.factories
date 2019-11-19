@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.crud2.spring.boot.autoconfigure.Crud2AutoConfiguration,\
+org.crud2.spring.boot.autoconfigure.Crud2AutoEngineAutoConfiguration,\
+org.crud2.spring.boot.autoconfigure.Crud2WebAutoConfiguration
