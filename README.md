@@ -1,0 +1,1 @@
+# crud2-spring-boot-autoconfigure
