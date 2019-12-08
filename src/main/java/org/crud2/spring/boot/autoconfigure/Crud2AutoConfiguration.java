@@ -2,7 +2,6 @@ package org.crud2.spring.boot.autoconfigure;
 
 import org.crud2.CRUD;
 import org.crud2.CRUD2BeanFactory;
-import org.crud2.Initializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -23,9 +22,6 @@ public class Crud2AutoConfiguration {
     @Autowired
     private CRUD crud;
 
-    @Autowired
-    private Initializer initializer;
-
     @Value("${crud2.dialect}")
     private String dialect;
 
@@ -35,7 +31,6 @@ public class Crud2AutoConfiguration {
         if (dialect != null && dialect.length() > 0) {
             CRUD.dialect = dialect;
         }
-        initializer.initialize();
     }
 
 
