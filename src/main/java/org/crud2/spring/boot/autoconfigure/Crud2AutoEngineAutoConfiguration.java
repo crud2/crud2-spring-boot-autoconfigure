@@ -2,11 +2,15 @@ package org.crud2.spring.boot.autoconfigure;
 
 import org.crud2.CRUD2BeanFactory;
 import org.crud2.autoengine.AutoEngine;
+import org.crud2.autoengine.AutoEngineSessionBean;
 import org.crud2.autoengine.config.ModuleDefineFactory;
 import org.crud2.autoengine.sql.SqlTextParameterResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.Resource;
 
 import javax.annotation.PostConstruct;
@@ -33,4 +37,6 @@ public class Crud2AutoEngineAutoConfiguration {
         moduleDefineFactory.regModules();
         autoEngine.init(crud2BeanFactory, moduleDefineFactory, sqlTextParameterResolver);
     }
+
+
 }
